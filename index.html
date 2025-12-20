@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Smart Nearby Places Recommender</title>
+
+  <!-- Leaflet CSS -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet/dist/leaflet.css"
+  />
+
+  <!-- Leaflet Routing Machine CSS (REQUIRED FOR REAL ROUTES) -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css"
+  />
+
+  <!-- Your CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>📍 Smart Nearby Places Recommender</h1>
+
+    <!-- 🔍 SEARCH BAR -->
+    <div class="controls">
+      <select id="category">
+        <option value="">Select Category</option>
+        <option value="hospital">Hospital</option>
+        <option value="atm">ATM</option>
+        <option value="restaurant">Restaurant</option>
+        <option value="mall">Shopping</option>
+        <option value="hotel">Hotel</option>
+      </select>
+
+      <button onclick="findPlaces()">Find Nearby</button>
+    </div>
+
+    <!-- 🗺️ MAP -->
+    <div id="map"></div>
+
+    <!-- 📋 RESULTS -->
+    <div id="results"></div>
+
+  </div>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+  <!-- Leaflet Routing Machine JS (REQUIRED FOR REAL ROUTES) -->
+  <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+
+  <!-- Your JS -->
+  <script src="script.js"></script>
+
+</body>
+</html>

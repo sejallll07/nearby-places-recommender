@@ -1,0 +1,218 @@
+/* =========================
+ BASE STYLES
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+  background: linear-gradient(135deg, #f1e9f6, #e3d4ee);
+  min-height: 100vh;
+  padding: 30px 15px;
+  color: #2b0a3d;
+}
+
+/* =========================
+ CONTAINER
+========================= */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.97);
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: 0 20px 45px rgba(43, 10, 61, 0.18);
+}
+
+/* =========================
+ HEADER
+========================= */
+h1 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #2b0a3d; /* 🔥 exact shade */
+}
+
+/* =========================
+ CONTROLS
+========================= */
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 18px;
+  margin-bottom: 30px;
+  background: linear-gradient(135deg, #f6effa, #ece1f3);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(43, 10, 61, 0.12);
+  flex-wrap: wrap;
+}
+
+.controls select,
+.controls button {
+  padding: 14px 18px;
+  border-radius: 12px;
+  font-size: 15px;
+}
+
+/* =========================
+ DROPDOWN (BASED ON YOUR SHADE)
+========================= */
+.controls select {
+  min-width: 260px;
+  padding: 14px 44px 14px 18px;
+  font-weight: 500;
+  color: #2b0a3d;
+  background-color: #ffffff;
+  border: 1px solid #cbb6d8;
+
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  cursor: pointer;
+  transition: all 0.25s ease;
+
+  background-image:
+    linear-gradient(45deg, transparent 50%, #2b0a3d 50%),
+    linear-gradient(135deg, #2b0a3d 50%, transparent 50%);
+  background-position:
+    calc(100% - 22px) 50%,
+    calc(100% - 16px) 50%;
+  background-size: 6px 6px, 6px 6px;
+  background-repeat: no-repeat;
+}
+
+.controls select:hover {
+  border-color: #2b0a3d;
+}
+
+.controls select:focus {
+  outline: none;
+  border-color: #2b0a3d;
+  box-shadow: 0 0 0 3px rgba(43, 10, 61, 0.25);
+}
+
+/* =========================
+ BUTTON
+========================= */
+.controls button {
+  background: linear-gradient(135deg, #3a0f55, #2b0a3d);
+  border: none;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.controls button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(43, 10, 61, 0.45);
+}
+
+.controls button:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* =========================
+ MAP
+========================= */
+#map {
+  width: 100%;
+  height: 400px;
+  border-radius: 18px;
+  border: 1px solid #dbcbe6;
+  margin-bottom: 25px;
+}
+
+/* =========================
+ RESULTS
+========================= */
+#results {
+  max-height: 300px;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+/* =========================
+ RESULT ITEM
+========================= */
+.result-item {
+  background: linear-gradient(135deg, #faf6fd, #efe6f5);
+  padding: 14px 18px;
+  margin-bottom: 12px;
+  border-radius: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  border-left: 5px solid #2b0a3d;
+  transition: all 0.25s ease;
+}
+
+.result-item:hover {
+  transform: translateX(6px);
+  background: linear-gradient(135deg, #efe6f5, #e3d6ec);
+}
+
+.result-left {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.result-distance {
+  background: #2b0a3d;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* ACTIVE RESULT */
+.result-item.active {
+  background: linear-gradient(135deg, #e2d4eb, #d1bddf);
+  border-left: 6px solid #3a0f55;
+  box-shadow: 0 10px 25px rgba(43, 10, 61, 0.35);
+}
+
+/* =========================
+ SCROLLBAR
+========================= */
+#results::-webkit-scrollbar {
+  width: 6px;
+}
+
+#results::-webkit-scrollbar-thumb {
+  background: #cbb6d8;
+  border-radius: 10px;
+}
+
+#results::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* =========================
+ RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  #map {
+    height: 320px;
+  }
+
+  .controls {
+    flex-direction: column;
+  }
+
+  .controls select,
+  .controls button {
+    width: 100%;
+  }
+}
