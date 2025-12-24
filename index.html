@@ -1,31 +1,34 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Smart Nearby Places Recommender</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Leaflet CSS -->
+  <title>Locatr</title>
+
+  
   <link
     rel="stylesheet"
-    href="https://unpkg.com/leaflet/dist/leaflet.css"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
   />
 
-  <!-- Leaflet Routing Machine CSS (REQUIRED FOR REAL ROUTES) -->
+ 
   <link
     rel="stylesheet"
-    href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css"
+    href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css"
   />
 
-  <!-- Your CSS -->
-  <link rel="stylesheet" href="style.css">
+  
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
   <div class="container">
 
-    <h1>📍 Smart Nearby Places Recommender</h1>
+    <h1>Locatr</h1>
 
-    <!-- 🔍 SEARCH BAR -->
+    
     <div class="controls">
       <select id="category">
         <option value="">Select Category</option>
@@ -39,21 +42,20 @@
       <button onclick="findPlaces()">Find Nearby</button>
     </div>
 
-    <!-- 🗺️ MAP -->
+
     <div id="map"></div>
 
-    <!-- 📋 RESULTS -->
+    
     <div id="results"></div>
 
   </div>
 
-  <!-- Leaflet JS -->
-  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
-  <!-- Leaflet Routing Machine JS (REQUIRED FOR REAL ROUTES) -->
-  <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
-  <!-- Your JS -->
+
+  <script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js"></script>
+
   <script src="script.js"></script>
 
 </body>
